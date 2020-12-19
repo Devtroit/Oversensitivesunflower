@@ -1,0 +1,40 @@
+{
+    "posters": [
+      {
+        "id": 1,
+        "name": "Detroit",
+        "price": 1299,
+        "imgName": "Album 1.png"
+      },
+     
+      {
+        "id": 3,
+        "name": "Chambers",
+        "price": 999,
+        "imgName": "Album 3.png"
+      },
+      {
+        "id": 4,
+        "name": "Daybreak",
+        "price": 1999,
+        "imgName": "Album 4.png"
+      }
+    
+    ],
+
+    "stickers": [
+      {
+        "id": 5,
+        "name": "Smile",
+        "price": 1999,
+        "imgName": "rat.png"
+      },
+     
+      {
+        "id": 6,
+        "name": "Sunflower",
+        "price": 699,
+        "imgName": "sunflower.png"
+      }
+    ]
+  }

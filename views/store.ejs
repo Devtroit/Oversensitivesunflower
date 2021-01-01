@@ -1,61 +1,36 @@
-<%- include("partials/header") -%>
-<script src="https://checkout.stripe.com/checkout.js" defer></script>
-        <script>
-            var stripePublicKey = '<%= stripePublicKey %>'
-        </script>
-        <script src="store.js" defer></script>
+<%- include("partials/blank-header") -%>
 
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 
-<hr>
 
-<h2>Buy Posters!</h2>
-<div class="shop-items">
-    <% items.posters.forEach(function(item){ %>
-        <div class="shop-item" data-item-id="<%= item.id %>">
-            <p class="shop-item-title"><%= item.name %></p>
-            <img class="shop-item-image" src="Images/<%= item.imgName %>">
-            <div class="shop-item-details">
-                <p class="shop-item-price">$<%= item.price / 100 %></p>
-                <button class="btn btn-warning shop-item-button" type="button">ADD TO CART</button>
+    <h2> Shop posters!</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="shop-item">
+
+                    <img class="shop-item-image"
+                        src="https://scontent.fdet1-1.fna.fbcdn.net/v/t1.0-9/130299546_208468710856002_8876663472685907129_o.png?_nc_cat=107&ccb=2&_nc_sid=8024bb&_nc_ohc=-02lhxWgYAQAX84q-C2&_nc_ht=scontent.fdet1-1.fna&oh=6b3ac8040ed72c3f873daedbcb2ea36d&oe=601400A2"
+                        alt="Doll" />
+
+                    <div class="description">
+                        <h2>Doll</h2>
+                        <h3>$1.99</h3>
+                    </div>
+
+                    <button id="checkout-button" class="btn btn-warning">Checkout</button>
+
+              </div>
+              </div>
             </div>
         </div>
-    <% }) %>
-</div>
-</section>
 
-<hr>
 
-    <h2>Buy Stickers!</h2>
-    <div class="shop-items">
-        <% items.stickers.forEach(function(item){ %>
-            <div class="shop-item" data-item-id="<%= item.id %>">
-                <p class="shop-item-title"><%= item.name %></p>
-                <img class="shop-item-image" src="Images/<%= item.imgName %>">
-                <div class="shop-item-details">
-                    <p class="shop-item-price">$<%= item.price / 100 %></p>
-                    <button class="btn btn-warning shop-item-button" type="button">ADD TO CART</button>
-                </div>
-            </div>
-        <% }) %>
-    </div>
-</section>
-<hr>
-<section class="container content-section">
-    <h2 class="section-header">CART</h2>
-    <div class="cart-row">
-        <span class="cart-item cart-header cart-column">ITEM</span>
-        <span class="cart-price cart-header cart-column">PRICE</span>
-        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
-    </div>
-    <div class="cart-items">
-    </div>
-    <div class="cart-total">
-        <strong class="cart-total-title">Total</strong>
-        <span class="cart-total-price">$0</span>
-    </div>
-    <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-</section>
+
+      
 
 
 
@@ -63,4 +38,40 @@
 
 
 
-<%-include("partials/footer")-%>
+
+
+    <script type="text/javascript">
+        // Create an instance of the Stripe object with your publishable API key
+        var stripe = Stripe("pk_live_51HzrQNKXbWa2qZE46ADoRZB32MtmXIOD4KTtScGeOTupGI6qSJgsVv6l8T2zntWAOWKNO78Bvk7qDDRzAOmaDFjN00AfmVX6jQ");
+        var checkoutButton = document.getElementById("checkout-button");
+        checkoutButton.addEventListener("click", function () {
+            fetch("/create-checkout-session", {
+                method: "POST",
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (session) {
+                    return stripe.redirectToCheckout({ sessionId: session.id });
+                })
+                .then(function (result) {
+                    // If redirectToCheckout fails due to a browser or network
+                    // error, you should display the localized error message to your
+                    // customer using error.message.
+                    if (result.error) {
+                        alert(result.error.message);
+                    }
+                })
+                .catch(function (error) {
+                    console.error("Error:", error);
+                });
+        });
+    </script>
+
+
+
+
+
+
+
+    <%-include("partials/footer")-%>

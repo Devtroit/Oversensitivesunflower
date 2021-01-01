@@ -1,0 +1,69 @@
+<%- include("partials/active-header") -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+
+
+
+         
+
+                        <h2>Digital portraits!</h2>
+ 
+            <p> Upload a photo of yourself. We will turn it into a beautiful digital photo! Photos are $15. We accept all debit/credit cards and paypal via secure checkout.</p>
+               
+                    
+              
+            <form method="POST" action="/upload" enctype="multipart/form-data">
+              
+                <input type="file" name="image"> 
+            
+                <div class="form-group">
+                    <input type="text" name="name" id="name" class="form-control input-sm"
+                        placeholder="First & Last Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control input-lg"
+                        placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="notes" id="notes" class="form-control input-lg"
+                        placeholder="Notes for the artist">
+                </div>
+            
+            
+<input type="submit" class="btn btn-success"> 
+
+
+</div>
+</div>
+</div>
+</div>
+</form>
+
+
+<hr class ="hr_1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%-include("partials/footer")-%>

@@ -2,39 +2,53 @@
     "posters": [
       {
         "id": 1,
-        "name": "Detroit",
+        "name": "Doll",
         "price": 1299,
-        "imgName": "Album 1.png"
+        "imgName": "Doll.png"
       },
      
       {
-        "id": 3,
-        "name": "Chambers",
+        "id": 2,
+        "name": "Girl Power",
         "price": 999,
-        "imgName": "Album 3.png"
+        "imgName": "Girl_power.png"
+      },
+      {
+        "id": 3,
+        "name": "Jess",
+        "price": 1199,
+        "imgName": "jess.png"
       },
       {
         "id": 4,
-        "name": "Daybreak",
-        "price": 1999,
-        "imgName": "Album 4.png"
-      }
-    
-    ],
+        "name": "Detroit",
+        "price":1999,
+        "imgName":"d_girl.png"
 
-    "stickers": [
+      },
+
       {
         "id": 5,
-        "name": "Smile",
-        "price": 1999,
-        "imgName": "rat.png"
-      },
-     
-      {
-        "id": 6,
-        "name": "Sunflower",
-        "price": 699,
-        "imgName": "sunflower.png"
-      }
-    ]
-  }
+        "name": "Miracles",
+        "price":1999,
+        "imgName":"miracles.png"
+} ],
+      
+
+
+
+      "stickers": [
+        {
+          "id": 6,
+          "name": "Smile",
+          "price": 1999,
+          "imgName": "Shirt.png"
+        },
+        {
+          "id": 7,
+          "name": "Coffee Cup",
+          "price": 699,
+          "imgName": "Cofee.png"
+        }
+      ]
+    }

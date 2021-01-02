@@ -1,2 +1,2 @@
-web: node src/app.js
+web: node app.js
 // note if you're not using npm, you can try something like 'web: node app.js' instead

@@ -1,30 +1,12 @@
-
-
-.jumbotron {
-   background-image: url('OSunflower.png');
-   height: 100vh;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center center;
-   border-bottom: 1px solid #A0837D;
-}
-
 .navbar-main {
-
-
    border-bottom: 1px;
-   height: 85px;
+   height: 75px;
    background-image: linear-gradient(15deg, #A0837D 0, #fdbb2d 100%);
-   
-}
-
-
-
+   }
 
 .navbar-nav,
 .navbar .nav-link {
-   
-   font-family: 'Patrick Hand SC', cursive;
+   font-family: 'Patrick Hand SC';
    font-size: 1.3rem;
 }
 
@@ -34,57 +16,28 @@
 
 h2 {
    font-family: 'Patrick Hand SC';
-   color: #532310;
+   color: #702963;
    font-size: 2.6rem;
    padding: 25px;
 }
 
 .profile_img {
-
-   border-radius: 50%;
+ border-radius: 50%;
 }
 
 .container {
-
    text-align: center;
    padding: 35px;
-
 }
 
 p {
-
    font-family: 'Raleway', sans-serif;
-   color: #532310;
+   color: #702963;
    font-size: 1.6rem;
    padding: 35px;
-
 }
-
-
-
-
-
-
-.card {
-
-   border:none;
-
-}
-
-
-a:hover {
-   color: #fdbb2d !important;
- }
-
- 
-
-
-
-
 
 .directory {
-   
-     
       height: 450px;
       display: flex;
       align-items: center;
@@ -92,17 +45,12 @@ a:hover {
       border: 1px solid black;
       margin: 0 7.5px 1px;
       overflow: hidden;
-      
-      
       position: relative;
 }
-     
-    
-      .directory:hover {
+       .directory:hover {
         cursor: pointer;
       }
-    
-         .directory_img:hover {
+      .directory_img:hover {
           transform: scale(1.1);
           transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
@@ -120,43 +68,13 @@ a:hover {
 
 
 
-.sunflower_sticker{
-
- width:75%;
- 
-}
-
-.poster_img{
-
-   width:75%;
-   border: 5px solid black;
-
-}
-
-hr{
 
 
-   
-   max-width: 50%;
-   
-
+hr {
+ max-width: 50%;
 }
 
 
-.poster_page {
-
-   padding:15%;
-}
-
-
-
-
-
-h6 {
-
-   margin: 15px;
-   color: black;
-}
 
 .fa-facebook {
    color: blue
@@ -168,13 +86,11 @@ h6 {
 
 }
 
-
 .fa-youtube {
 
    color: #FF0000;
 
 }
-
 
 .fa-instagram {
 
@@ -182,131 +98,6 @@ h6 {
 
 }
 
-
-
-
-
-
-.section-header {
-   font-family: "Metal Mania";
-   font-weight: normal;
-   color: #333;
-   text-align: center;
-   font-size: 2.5em;
-}
-
-.about-band-image {
-   float: left;
-   height: 200px;
-   width: 200px;
-   margin: 15px;
-   border-radius: 50%;
-}
-
-.main-footer {
-   background-color: #56CCF2;
-   color: white;
-   padding: .25em 0;
-}
-
-.main-footer-container {
-   display: flex;
-   align-items: center;
-}
-
-.main-footer-container ul {
-   flex-grow: 1;
-   text-align: end;
-}
-
-.footer-nav li {
-   padding: 0 .5em;
-}
-
-.footer-nav img {
-   width: 30px;
-   height: 30px;
-}
-
-.btn {
-   text-align: center;
-   vertical-align: middle;
-   padding: .67em .67em;
-   cursor: pointer;
-}
-
-.btn-header {
-   margin: .5em 15% 2em 15%;
-   color: white;
-   border: 2px solid #2D9CDB;
-   background-color: rgba(255, 255, 255, .1);
-   border-radius: 0;
-   font-size: 1.5em;
-   font-weight: lighter;
-   padding-left: 2em;
-   padding-right: 2em;
-}
-
-.btn-header:hover {
-   background-color: rgba(255, 255, 255, .3);
-}
-
-.btn-play {
-   display: block;
-   margin: 0 auto;
-   color: #2D9CDB;
-   font-size: 4em;
-   border-radius: 50%;
-   width: 100px;
-   height: 100px;
-   padding: 0;
-   text-align: center;
-}
-
-.btn-primary {
-   color: white;
-   background-color: #56CCF2;
-   border: none;
-   border-radius: .3em;
-   font-weight: bold;
-}
-
-.btn-primary:hover {
-   background-color: #2D9CDB;
-}
-
-.tour-row {
-   border-bottom: 1px solid black;
-   padding-bottom: 1em;
-   margin-bottom: 1em;
-}
-
-.tour-row:last-child {
-   border: none;
-}
-
-.tour-item {
-   display: inline-block;
-   padding-right: .5em;
-}
-
-.tour-date {
-   color: #555;
-   width: 11%;
-   font-weight: bold;
-}
-
-.tour-city {
-   width: 24%;
-}
-
-.tour-arena {
-   width: 42%;
-}
-
-.tour-btn {
-   max-width: 19%;
-}
 
 .shop-item {
    margin: 30px;
@@ -336,7 +127,7 @@ h6 {
 
 .shop-item-price {
    flex-grow: 1;
-   color: #333;
+   color: #702963;
 }
 
 .shop-items {
@@ -346,11 +137,14 @@ h6 {
 }
 
 
+    .shop-item-image:hover {
+     transform: scale(1.1);
+     transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+     cursor: pointer;
+   }
 
-.btn-purchase {
-   display: block;
-   margin: 40px auto 80px auto;
-   font-size: 1.75em;
-}
+  
+    
+  
 
 

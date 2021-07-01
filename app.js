@@ -20,7 +20,8 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const { ppid } = require('process')
 const { default: Stripe } = require('stripe')
-const { result } = require('lodash')
+const { result } = require('lodash');
+const { kStringMaxLength } = require('buffer');
 
 mongoose.connect('mongodb://localhost:27017/OSSF', {useNewUrlParser:true,  useUnifiedTopology: true })
   .then(() => console.log('MongoDB Connected'))
@@ -159,18 +160,13 @@ app.post('/logout', (req, res) => {
   })
 
 
-
-
-
-
-
 app.get("/store", function (req,res){
   res.render("store");
 })
 
 
 
-app.post('/create-checkout-session', async (req, res) => {
+/* app.post('/create-checkout-session', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     
     submit_type: 'pay',
@@ -186,8 +182,9 @@ line_items: [ {
         price_data: {
           currency: 'usd',
           product_data: {
-            name: 'Doll',
-            images: ['https://scontent.fdet1-1.fna.fbcdn.net/v/t1.0-9/130299546_208468710856002_8876663472685907129_o.png?_nc_cat=107&ccb=2&_nc_sid=8024bb&_nc_ohc=-02lhxWgYAQAX84q-C2&_nc_ht=scontent.fdet1-1.fna&oh=6b3ac8040ed72c3f873daedbcb2ea36d&oe=601400A2'],
+            name: 'Kash Doll',
+            images: ['Images/Kash.png'],
+           
           },
           unit_amount: 1199,
         },
@@ -202,12 +199,21 @@ line_items: [ {
   });
   res.json({ id: session.id });
 });
+ */
 
 
 
 
 
-app.post('/create-checkout-session1', async (req, res) => {
+
+
+
+
+
+
+
+
+/* app.post('/create-checkout-session1', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     
     submit_type: 'pay',
@@ -382,7 +388,7 @@ line_items: [ {
   });
   res.json({ id: session.id });
 });
-
+ */
 
 
 
